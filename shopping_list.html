@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 id="name">Shopping List</h1>
+        </div>
+        <div class="col-md-6">
+          <input id="search" placeholder="Search"></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3">
+          <div class="row">
+            <label>Name</label>
+            <input id="item-name" placeholder="Name"></input>
+          </div>
+          <div class="row">
+            <select id="store-select" name="store">
+            </select>
+          </div>
+          <div class="row">
+            <label>Price</label>
+            <input id="price-input" placeholder="Price"></input>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="row">
+            <select id="quantity-select" name="quantity">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+          <div class="row">
+            <select id="section-select" name="section">
+            </select>
+          </div>
+          <div class="row">
+            <button class="btn btn-primary" type="button" onclick="addItem()" id="add-button">Add</button>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="row">
+            <select id="priority-select" name="priority">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <table id="item-table" class="table">
+          <thead>
+            <tr>
+              <th>item</th>
+              <th>qty</th>
+              <th>Store</th>
+              <th>Section</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody id="item-table-body">
+          </tbody>
+        </table>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      <script src="js/shopping_list.js"></script>
+    </div>
+  </body>
+</html>
