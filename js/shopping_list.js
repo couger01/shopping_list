@@ -1,36 +1,17 @@
-function addItem() {
+let sl = new shoppingList();
+let sv = new shoppingView(sl);
+
+function clickedOn() {
   let name = document.querySelector("#item-name");
   let store = document.querySelector("#store-select");
   let price = document.querySelector("#price-input");
   let quantity = document.querySelector("#quantity-select");
   let section = document.querySelector("#section-select");
-  //let priority = document.querySelector("#priority-select");
-
-  let tbody = document.querySelector("#item-table-body");
-  let tr = document.createElement("tr");
-
-  let nametd = document.createElement("td");
-  let storetd = document.createElement("td");
-  let pricetd = document.createElement("td");
-  let quantitytd = document.createElement("td");
-  let sectiontd = document.createElement("td");
-  //let prioritytd = document.createElement("td");
-  nametd.innerHTML = name.value;
-  storetd.innerHTML = store.value;
-  pricetd.innerHTML = price.value;
-  quantitytd.innerHTML = quantity.value;
-  sectiontd.innerHTML = section.value;
-  //prioritytd.innerHTML = priority.value;
-  tr.appendChild(nametd);
-  tr.appendChild(quantitytd);
-  tr.appendChild(storetd);
-  tr.appendChild(sectiontd);
-  tr.appendChild(pricetd);
-
-
-  //tr.appendChild(prioritytd);
-  tbody.appendChild(tr);
+  let priority = document.querySelector("#priority-select");
+  let item = new Item(name,store,price,quantity,section,priority);
+  sl.addItem(item);
 }
+
 
 function addData() {
   let storeArray = ["Decorah Mart","Walmart", "Fareway"];
